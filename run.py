@@ -1,3 +1,6 @@
+import random
+import words from words
+
 print(
     """
     Hello and Welcome to a classic game of hangman.
@@ -13,16 +16,15 @@ def name():
     Ask the user to input their name
     """
     player_name = input("What is your name?\n")
-    print(f"\nHello and Welcome {player_name}\n")
+    print(f"\nHello and Welcome {player_name.capitalize()}\n")
     run_game()
     
 
 
 def run_game():
     """
-    Starts the game
+    Lets the user start the game
     """
-
     while True:
         print("Do you wanna start?")
         start_game = input(('Press "Y" to start and "N" to exit\n'))
@@ -45,6 +47,9 @@ def play_game():
     print("hej")
 
 def end_game():
+    """
+    Message shown when player choose to end the game
+    """
     print("\nThank you for playing! Have a Good Day :)\n")
 
 name ()
