@@ -1,5 +1,5 @@
 import random
-import words from words
+from words import words
 
 print(
     """
@@ -40,7 +40,12 @@ def run_game():
             print("\nInvalid input please press Y or N\n")
             
     
-
+def random_word(words):
+    """
+    Generate random word to the game
+    """
+    word = random.choice(words)
+    return word
 
 
 def play_game():
@@ -50,6 +55,8 @@ def end_game():
     """
     Message shown when player choose to end the game
     """
-    print("\nThank you for playing! Have a Good Day :)\n")
+    print(f"\nThank you for playing! Have a Good Day :)\n")
 
 name ()
+
+
