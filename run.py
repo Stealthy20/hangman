@@ -2,13 +2,13 @@ import random
 from words import words
 
 print(
-    """
-    Hello and Welcome to a classic game of hangman.
-    You will be provided with a random word which lengt is
-    displayed as -, one - is one letter. 
-    You have 6 guesses to find the hidden word!
-    Good Luck!
-    """
+"""
+Hello and Welcome to a classic game of hangman.
+You will be provided with a random word which lengt is
+displayed as -, one - is one letter. 
+You have 6 guesses to find the hidden word!
+Good Luck!
+"""
 )
 
 def name():
@@ -18,35 +18,31 @@ def name():
     player_name = input("What is your name?\n")
     print(f"\nHello and Welcome {player_name.capitalize()}\n")
     run_game()
-    
-
-
+  
 def run_game():
     """
     Lets the user start the game
     """
     while True:
-        print("Do you wanna start?")
-        start_game = input(('Press "Y" to start and "N" to exit\n'))
 
-        if start_game == "Y" or start_game == "y":
+        print("Do you wanna start the game?")
+        start_game = input('Press "Y" to start and "N" to exit\n').lower()
+
+        if start_game == "y":
             play_game()
             break
-
-        elif start_game == "N" or start_game == "n":
+        elif start_game == "n":
             end_game()
             break
         else:
-            print("\nInvalid input please press Y or N\n")
+            print("\nInvalid input, please press Y or N\n")
             
-    
 def random_word(words):
     """
     Generate random word to the game
     """
     word = random.choice(words)
     return word
-
 
 def play_game():
     print("hej")
