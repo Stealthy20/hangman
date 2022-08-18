@@ -8,3 +8,15 @@ print(
     """
 )
 
+def name():
+    """
+    Ask the user to input their name
+    """
+    name = input("What is your name?\n")
+    print(f"Hello and Welcome {name}")
+    run_game()
+
+
+def run_game():
+    print("Do you wanna play?")
+name ()
