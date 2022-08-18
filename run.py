@@ -12,11 +12,38 @@ def name():
     """
     Ask the user to input their name
     """
-    name = input("What is your name?\n")
-    print(f"Hello and Welcome {name}")
+    player_name = input("What is your name?\n")
+    print(f"\nHello and Welcome {player_name}\n")
     run_game()
 
 
 def run_game():
-    print("Do you wanna play?")
+    """
+    Starts the game
+    """
+
+    while True:
+        print("Do you wanna start?")
+        start_game = input(('Press "Y" to start and "N" to exit\n'))
+
+    
+        if start_game == "Y" or start_game == "y":
+            play_game()
+            break
+        elif start_game == "N" or start_game == "n":
+            end_game()
+            break
+        else:
+            print("\nInvalid input please press Y or N\n")
+            
+    
+
+
+
+def play_game():
+    print("hej")
+
+def end_game():
+    print("Hej Då")
+
 name ()
