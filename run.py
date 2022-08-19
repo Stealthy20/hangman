@@ -49,7 +49,7 @@ def random_word():
 
 
 def play_game():
-    word = word = random_word()
+    word = random_word()
     hidden_word = "_ " * len(word)
     guessed = False
     guessed_letters = []
@@ -60,12 +60,36 @@ def play_game():
     while not guessed and tries > 0:
         guess = input("Make your guess\n").upper()
         if len(guess) == 1 and guess.isalpha():
-            print("good")
+            if guess is guessed_letters:
+                print("You have already guessed that letter")
+            elif guess not in word:
+                print(f"{guess} is not in the word, Try Again!")
+                tries -= 1
+                guessed_letters.append(guess)
+            else:
+                print(f"Good job,", {guess}, "is in the word!")
+                guessed_letters.append(guess)
+                word_as_list = list(hidden_word)
+                indices = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indices:
+                    word_as_list[index] = guess
+                hidden_word = "".join(word_as_list)
+                if "_" not in hidden_word:
+                    guessed = True    
+
         else: 
             print("That's not a valid guess, expected exactly one letter")
         
-     
-
+        print(f"You have {tries} tries left\n")
+        print(hidden_word)
+        print("\n")
+        print(f"Guessed Letters {guessed_letters}")
+    if guessed:
+        print("Congrats, you guessed the word! You win!\n")
+        run_game()
+    else:
+        print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!\n")
+        run_game()
 
 
 
