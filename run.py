@@ -51,11 +51,14 @@ def random_word():
 def play_game():
     word = word = random_word()
     hidden_word = "_ " * len(word)
+    guessed = False
     guessed_letters = []
     tries = 6
     print(f"Lets Play!\nYou have {tries} tries left!")
     print(f"{hidden_word}\n")
     
+    while not guessed and tries > 0:
+        guess = input("Make your guess\n").upper()
 
      
 
