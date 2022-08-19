@@ -59,7 +59,11 @@ def play_game():
     
     while not guessed and tries > 0:
         guess = input("Make your guess\n").upper()
-
+        if len(guess) == 1 and guess.isalpha():
+            print("good")
+        else: 
+            print("That's not a valid guess, expected exactly one letter")
+        
      
 
 
@@ -71,13 +75,12 @@ def end_game():
     """
     print(f"\nThank you for playing! Have a Good Day :)\n")
 
-def main():
-    name ()
+
+name ()
     
     
      
     
-main()
 
 
 
