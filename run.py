@@ -37,15 +37,30 @@ def run_game():
         else:
             print("\nInvalid input, please press Y or N\n")
             
-def random_word(words):
+def random_word():
     """
     Generate random word to the game
     """
     word = random.choice(words)
-    return word
+    return word.upper()
+
+
+
+
 
 def play_game():
-    print("hej")
+    word = word = random_word()
+    hidden_word = "_ " * len(word)
+    guessed_letters = []
+    tries = 6
+    print(f"Lets Play!\nYou have {tries} tries left!")
+    print(f"{hidden_word}\n")
+    
+
+     
+
+
+
 
 def end_game():
     """
@@ -53,6 +68,13 @@ def end_game():
     """
     print(f"\nThank you for playing! Have a Good Day :)\n")
 
-name ()
+def main():
+    name ()
+    
+    
+     
+    
+main()
+
 
 
