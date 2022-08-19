@@ -49,6 +49,10 @@ def random_word():
 
 
 def play_game():
+    """
+    Runs the game and handle the guesses from the user
+    Alot of code taken from https://www.youtube.com/watch?v=m4nEnsavl6w
+    """
     word = random_word()
     hidden_word = "_ " * len(word)
     guessed = False
