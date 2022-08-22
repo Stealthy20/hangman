@@ -11,15 +11,15 @@ Good Luck!
 """
 )
 
-def name():
+def intro():
     """
     Ask the user to input their name
     """
     player_name = input("What is your name?\n")
     print(f"\nHello and Welcome {player_name.capitalize()}\n")
-    run_game()
+    return player_name
   
-def run_game():
+def start_game():
     """
     Lets the user start the game
     """
@@ -35,18 +35,14 @@ def run_game():
             end_game()
             break
         else:
-            print("\nInvalid input, please press Y or N\n")
-            
+            print("Invalid input, please press Y or N\n")
+                
 def random_word():
     """
     Generate random word to the game
     """
     word = random.choice(words)
     return word.upper()
-
-
-
-
 
 def play_game():
     """
@@ -71,7 +67,7 @@ def play_game():
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print(f"Good job,", {guess}, "is in the word!")
+                print(f"Good job, {guess}, is in the word!")
                 guessed_letters.append(guess)
                 word_as_list = list(hidden_word)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
@@ -80,7 +76,6 @@ def play_game():
                 hidden_word = "".join(word_as_list)
                 if "_" not in hidden_word:
                     guessed = True    
-
         else: 
             print("That's not a valid guess, expected exactly one letter")
         
@@ -90,25 +85,18 @@ def play_game():
         print(f"Guessed Letters {guessed_letters}")
     if guessed:
         print("Congrats, you guessed the word! You win!\n")
-        run_game()
+        start_game()
     else:
         print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!\n")
-        run_game()
+        start_game()
 
-
-
-def end_game():
+def end_game(player_name):
     """
     Message shown when player choose to end the game
     """
-    print(f"\nThank you for playing! Have a Good Day :)\n")
-
-
-name ()
     
-    
-     
-    
+    print(f"\nThank you for playing {player_name}! Have a Good Day :)\n")
 
-
-
+player_name = intro()
+start_game() 
+end_game()
