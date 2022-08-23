@@ -17,7 +17,7 @@ def intro():
     """
     player_name = input("What is your name?\n")
     print(f"\nHello and Welcome {player_name.capitalize()}\n")
-    return player_name
+    return player_name.capitalize()
   
 def start_game():
     """
@@ -32,7 +32,7 @@ def start_game():
             play_game()
             break
         elif start_game == "n":
-            end_game()
+            end_game(player_name)
             break
         else:
             print("Invalid input, please press Y or N\n")
@@ -99,4 +99,4 @@ def end_game(player_name):
 
 player_name = intro()
 start_game() 
-end_game()
+end_game(player_name)
