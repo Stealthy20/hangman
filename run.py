@@ -4,8 +4,8 @@ from words import words
 print(
 """
 Hello and Welcome to a classic game of hangman.
-You will be provided with a random word which lengt is
-displayed as -, one - is one letter. 
+You will be provided with a random word which is hidden
+behind _. If you guess the right letter it will apear in the row.
 You have 6 guesses to find the hidden word!
 Good Luck!
 """
@@ -15,10 +15,17 @@ def intro():
     """
     Ask the user to input their name
     """
-    player_name = input("What is your name?\n")
-    print(f"\nHello and Welcome {player_name.capitalize()}\n")
-    return player_name.capitalize()
-  
+   
+    while True:
+        player_name = input("What is your name?\n")
+
+        if player_name .isalpha():
+            print(f"\nHello and Welcome {player_name.capitalize()}\n")
+            return player_name.capitalize()
+            break
+        else:
+            print('Invalid input, expected values A-Z')
+
 def start_game():
     """
     Lets the user start the game
