@@ -66,7 +66,7 @@ def play_game(player_name):
     guessed_letters = []
     tries = 6
     print(f"Lets Play {player_name}!")
-    print(f"You have {tries} tries left!")
+    print(f"The word is {len(word)} letters long")
     print(f"{hidden_word}\n")
 
     while not guessed and tries > 0:
@@ -91,7 +91,7 @@ def play_game(player_name):
         else: 
             print("That's not a valid guess, expected exactly one letter")
 
-        print(f"")
+        print(f"The word is {len(word)} letters long")
         print(f"You have {tries} tries left\n")
         print(hidden_word)
         print("\n")
