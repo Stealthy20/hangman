@@ -11,11 +11,12 @@ Good Luck!
 """
 )
 
+
 def intro():
     """
     Ask the user to input their name
     """
-   
+
     while True:
         player_name = input("What is your name?\n")
 
@@ -25,6 +26,7 @@ def intro():
             break
         else:
             print('Invalid input, expected values A-Z')
+
 
 def start_game():
     """
@@ -43,7 +45,8 @@ def start_game():
             break
         else:
             print("Invalid input, please press Y or N\n")
-                
+
+
 def random_word():
     """
     Generate random word to the game
@@ -51,10 +54,11 @@ def random_word():
     word = random.choice(words)
     return word.upper()
 
+
 def play_game(player_name):
     """
     Runs the game and handle the guesses from the user
-    Alot of code taken from https://www.youtube.com/watch?v=m4nEnsavl6w
+    While loop taken from https://www.youtube.com/watch?v=m4nEnsavl6w
     """
     word = random_word()
     hidden_word = "_ " * len(word)
@@ -95,14 +99,14 @@ def play_game(player_name):
         print(f"Congrats {player_name}, you guessed the word! You win!\n")
         start_game()
     else:
-        print(f'Sorry {player_name}, you ran out of tries. The word was " {word} ". Maybe next time!\n')
+        print(f'Sorry {player_name}, you ran out of tries. \ 
+           The word was " {word} ". Maybe next time!\n')
         start_game()
 
 def end_game(player_name):
     """
     Message shown when player choose to end the game
     """
-    
     print(f"\nThank you for playing {player_name}! Have a Good Day :)\n")
 
 
