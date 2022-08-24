@@ -29,7 +29,7 @@ def start_game():
         start_game = input('Press "Y" to start and "N" to exit\n').lower()
 
         if start_game == "y":
-            play_game()
+            play_game(player_name)
             break
         elif start_game == "n":
             end_game(player_name)
@@ -44,7 +44,7 @@ def random_word():
     word = random.choice(words)
     return word.upper()
 
-def play_game():
+def play_game(player_name):
     """
     Runs the game and handle the guesses from the user
     Alot of code taken from https://www.youtube.com/watch?v=m4nEnsavl6w
@@ -54,7 +54,8 @@ def play_game():
     guessed = False
     guessed_letters = []
     tries = 6
-    print(f"Lets Play!\nYou have {tries} tries left!")
+    print(f"Lets Play {player_name}!")
+    print(f"You have {tries} tries left!")
     print(f"{hidden_word}\n")
     
     while not guessed and tries > 0:
@@ -84,10 +85,10 @@ def play_game():
         print("\n")
         print(f"Guessed Letters {guessed_letters}")
     if guessed:
-        print("Congrats, you guessed the word! You win!\n")
+        print(f"Congrats {player_name}, you guessed the word! You win!\n")
         start_game()
     else:
-        print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!\n")
+        print(f'Sorry {player_name}, you ran out of tries. The word was " {word} ". Maybe next time!\n')
         start_game()
 
 def end_game(player_name):
@@ -97,8 +98,8 @@ def end_game(player_name):
     
     print(f"\nThank you for playing {player_name}! Have a Good Day :)\n")
 
-def main()
-    player_name = intro()
-    start_game() 
 
-main()
+player_name = intro()
+start_game() 
+
+
