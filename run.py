@@ -61,14 +61,14 @@ def play_game(player_name):
     While loop taken from https://www.youtube.com/watch?v=m4nEnsavl6w
     """
     word = random_word()
-    hidden_word = "_ " * len(word)
+    hidden_word = "_" * len(word)
     guessed = False
     guessed_letters = []
     tries = 6
     print(f"Lets Play {player_name}!")
     print(f"You have {tries} tries left!")
     print(f"{hidden_word}\n")
-    
+
     while not guessed and tries > 0:
         guess = input("Make your guess\n").upper()
         if len(guess) == 1 and guess.isalpha():
@@ -90,7 +90,8 @@ def play_game(player_name):
                     guessed = True    
         else: 
             print("That's not a valid guess, expected exactly one letter")
-        
+
+        print(f"")
         print(f"You have {tries} tries left\n")
         print(hidden_word)
         print("\n")
@@ -99,9 +100,10 @@ def play_game(player_name):
         print(f"Congrats {player_name}, you guessed the word! You win!\n")
         start_game()
     else:
-        print(f'Sorry {player_name}, you ran out of tries. \ 
-           The word was " {word} ". Maybe next time!\n')
+        print(f'Sorry {player_name}, you ran out of tries.')
+        print(f'The word was "{word}". Maybe next time!\n')
         start_game()
+
 
 def end_game(player_name):
     """
@@ -111,6 +113,4 @@ def end_game(player_name):
 
 
 player_name = intro()
-start_game() 
-
-
+start_game()
