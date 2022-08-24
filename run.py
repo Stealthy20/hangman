@@ -97,6 +97,8 @@ def end_game(player_name):
     
     print(f"\nThank you for playing {player_name}! Have a Good Day :)\n")
 
-player_name = intro()
-start_game() 
-end_game(player_name)
+def main()
+    player_name = intro()
+    start_game() 
+
+main()
