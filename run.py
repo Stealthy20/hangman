@@ -2,13 +2,13 @@ import random
 from words import words
 
 print(
-"""
-Hello and Welcome to a classic game of hangman.
-You will be provided with a random word which is hidden
-behind _. If you guess the right letter it will apear in the row.
-You have 6 guesses to find the hidden word!
-Good Luck!
-"""
+    """
+    Hello and Welcome to a classic game of hangman.
+    You will be provided with a random word which is hidden
+    behind _. If you guess the right letter it will apear in the row.
+    You have 6 guesses to find the hidden word!
+    Good Luck!
+    """
 )
 
 
@@ -82,13 +82,14 @@ def play_game(player_name):
                 print(f"Good job, {guess}, is in the word!")
                 guessed_letters.append(guess)
                 word_as_list = list(hidden_word)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
+                indices = \
+                    [i for i, letter in enumerate(word) if letter == guess]
                 for index in indices:
                     word_as_list[index] = guess
                 hidden_word = "".join(word_as_list)
                 if "_" not in hidden_word:
-                    guessed = True    
-        else: 
+                    guessed = True
+        else:
             print("That's not a valid guess, expected exactly one letter")
 
         print(f"The word is {len(word)} letters long")
