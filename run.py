@@ -64,19 +64,19 @@ def play_game(player_name):
     hidden_word = "_" * len(word)
     guessed = False
     guessed_letters = []
-    tries = 6
+    guesses = 6
     print(f"Lets Play {player_name}!")
     print(f"The word is {len(word)} letters long")
     print(f"{hidden_word}\n")
 
-    while not guessed and tries > 0:
+    while not guessed and guesses > 0:
         guess = input("Make your guess\n").upper()
         if len(guess) == 1 and guess.isalpha():
-            if guess is guessed_letters:
+            if guess in guessed_letters:
                 print("You have already guessed that letter")
             elif guess not in word:
                 print(f"{guess} is not in the word, Try Again!")
-                tries -= 1
+                guesses -= 1
                 guessed_letters.append(guess)
             else:
                 print(f"Good job, {guess}, is in the word!")
@@ -92,8 +92,7 @@ def play_game(player_name):
         else:
             print("That's not a valid guess, expected exactly one letter")
 
-        print(f"The word is {len(word)} letters long")
-        print(f"You have {tries} tries left\n")
+        print(f"You have {guesses} guesses left\n")
         print(hidden_word)
         print("\n")
         print(f"Guessed Letters {guessed_letters}")
@@ -101,7 +100,7 @@ def play_game(player_name):
         print(f"Congrats {player_name}, you guessed the word! You win!\n")
         start_game()
     else:
-        print(f'Sorry {player_name}, you ran out of tries.')
+        print(f'Sorry {player_name}, you ran out of guesses.')
         print(f'The word was "{word}". Maybe next time!\n')
         start_game()
 
