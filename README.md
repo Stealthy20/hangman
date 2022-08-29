@@ -63,5 +63,15 @@ This is done by myself and togheter with my mentor to get a extra pairs of eyes.
 I will show some of the bugs i found and how i resolved them here below. 
 
 ## Bugs
+Here is an example of some of the bugs and problems that i encountered during the making of this project and how i resolved them. 
+No remainen bugs should be left in this project. 
+
+### Bug 1
+- I got a error message when the user did a invalid input and the function should run again to make the user do a new input. 
+![Image of the error message](docs/bug1.JPG)
+
+### Bug 1 fix 
+-  I couldn't call the function withing the function itself. So i wrapped it in a while loop, that is going until a valid input is made.  
+
 
 
