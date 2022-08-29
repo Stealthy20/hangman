@@ -130,3 +130,9 @@ This app was deployed using Code Insitute's mock terminal for Heroku.
   - Change the current working directory to the location where you want the cloned directory.
   - Type git clone, and then paste the URL you copied earlier.
   - Press Enter to create your local clone.
+
+## Credits
+- Code institute for the deployment terminal
+- My mentor Harry Dhillion for great advise and feedback
+- Guide used for inspiration and guidence [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w)
+- Random Words generated from (https://randomwordgenerator.com/)
