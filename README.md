@@ -99,3 +99,6 @@ No remainen bugs should be left in this project.
 -   I had the wrong keyword in the function. I had a IS insted of IN, which made it compare if it was the same not if the letter was in the list.
 ![Image of correct error message](docs/bug4fix.JPG)
 
+## Validator Testing
+- No errors when i ran the code through pep8online.com validator.
+
