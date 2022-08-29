@@ -4,7 +4,7 @@ This is a classic Hangman game. In the original game you play this with a friend
 Add Mockup
 
 ## Live Site
-Add live sit
+[Heroku](https://stealthy-hangman.herokuapp.com/)
 ## Repository
 [GitHub](https://github.com/Stealthy20/hangman)
 ## Planning 
@@ -99,6 +99,34 @@ No remainen bugs should be left in this project.
 -   I had the wrong keyword in the function. I had a IS insted of IN, which made it compare if it was the same not if the letter was in the list.
 ![Image of correct error message](docs/bug4fix.JPG)
 
-## Validator Testing
+### Validator Testing
 - No errors when i ran the code through pep8online.com validator.
 
+## Deployment
+This app was deployed using Code Insitute's mock terminal for Heroku.
+
+### Deploy to Heroku. 
+- Go to Heroku.com and create a free account. 
+    - Press create a new app. 
+    - Go to setting.
+    - Add the Python and Node.JS Buildback.
+    - It's important that they are in that order.
+    - Go back to Deploy and choose Deployment Method Github.
+    - Connect your Github.
+    - Search for the repository name and press connect.
+    - Choose Automatic or Manuall deployment.
+
+### Forking the Guthub Repository.
+- You can fork the original GitHub Respository to be able to view or make changes without it affecting the original repository.
+  - Go to the GitHub repository.
+  - in the top right, press the button named "Fork".
+  - You will now have a copy of the repository in your own GitHub. 
+
+### Make a Local Clone
+- Go to the GitHub Repository.
+  - Click the "Clone" button in the top of the repository.
+  - Copy the link.
+  - Open Git Bash.
+  - Change the current working directory to the location where you want the cloned directory.
+  - Type git clone, and then paste the URL you copied earlier.
+  - Press Enter to create your local clone.
