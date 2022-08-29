@@ -67,11 +67,35 @@ Here is an example of some of the bugs and problems that i encountered during th
 No remainen bugs should be left in this project. 
 
 ### Bug 1
-- I got a error message when the user did a invalid input and the function should run again to make the user do a new input. 
+-   I got a error message when the user did a invalid input and the function should run again to make the user do a new input. 
 ![Image of the error message](docs/bug1.JPG)
 
 ### Bug 1 fix 
--  I couldn't call the function withing the function itself. So i wrapped it in a while loop, that is going until a valid input is made.  
+-   I couldn't call the function withing the function itself. So i wrapped it in a while loop, that is going until a valid input is made.  
 
+![Image of the while loop in the function](docs/bug1fix.JPG)
 
+### Bug 2
+-   I got an error message when i tried to reuse the users name in diffrent functions in the game.
+![Image of the error message](docs/bug2.JPG)
+
+### Bug 2 fix
+-   After alot of research and two contact with the studen support i realised that i forgot to pass the argument everywhere that i call this function. 
+![Image of the function that i forgot to pass the argument to](docs/bug2fix.JPG)
+
+### Bug 3
+-   I had a problem where the guessed letters didnt appear on the right spot in the word. And sometimes the _ wasn't correctly removed. 
+![Image where the letter appears on the wrong place](docs/bug3.JPG)
+
+### Bug 3 fix
+-  I had a wrongly added space in the code. Which made the word longer and letters appear on the wrong place. I removed the space and everything worked. Added a print to show how many letters the word is since that became harder to see without the space. 
+![Image when the letters appear correctly](docs/bug3fix.JPG)
+
+### Bug 4
+-   The user was able to guess the same letter multiple times. And everytime it counted as a new guess. 
+![Image of the user beeing able to guess the same letter](docs/bug4.JPG)
+
+### Bug 4 fix
+-   I had the wrong keyword in the function. I had a IS insted of IN, which made it compare if it was the same not if the letter was in the list.
+![Image of correct error message](docs/bug4fix.JPG)
 
