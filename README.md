@@ -52,8 +52,16 @@ I made changes along the way. Espacially to make it better for the user with use
 
 ![Image of the end of the game](docs/end_game.JPG)
 
+### Future Features
+-   I want to add the choice of playing this with a friend. Where one player choose the word and the other tries to guess it. 
+-   A score system for two player mode so two players can compete. 
 
-# Features
-**This site contains the following content**
-We immediately start playing the Rock, Paper, Scissors game when the website first launches.
-You have the option to enter your name here, and it will appear in the game. If left blank, "Player" will be shown in its place.
+## Testing
+I have tested this project as it was built. Every function and parts of bigger functions have been tested seperatly to make sure that they work on their own. 
+The project is also tested as a whole game to make sure everything works togheter. It's tested in my own console and in Heroku Terminal. 
+This is done by myself and togheter with my mentor to get a extra pairs of eyes. 
+I will show some of the bugs i found and how i resolved them here below. 
+
+## Bugs
+
+
