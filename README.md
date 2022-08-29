@@ -1,7 +1,7 @@
 # Hangman
 This is a classic Hangman game. In the original game you play this with a friend that choose the hidden word. In this case the computer randomizes a word for you, and it's your job to guess the word before you run out of guesses. 
 
-Add Mockup
+![Mockup image of the site on diffrent devices](docs/mockup.JPG)
 
 ## Live Site
 [Heroku](https://stealthy-hangman.herokuapp.com/)
