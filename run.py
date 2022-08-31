@@ -20,7 +20,7 @@ def intro():
     while True:
         player_name = input("What is your name?\n")
 
-        if player_name .isalpha() and len(player_name) <=15:
+        if player_name .isalpha() and len(player_name) <= 15:
             print(f"\nHello and Welcome {player_name.capitalize()}\n")
             return player_name.capitalize()
             break
